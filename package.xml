@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>micro_ros_espidf_tiny_template</name>
+  <version>3.0.0</version>
+  <description>micro-ROS tiny template for Espressif ESP-IDF</description>
+  <maintainer email="tian.r.king@gmail.com">w0x7ce</maintainer>
+  <license>Apache License 2.0</license>
+</package>

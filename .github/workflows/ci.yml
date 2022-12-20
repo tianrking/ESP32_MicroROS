@@ -1,0 +1,94 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+
+  micro_ros_idf:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        idf_target: [ esp32, esp32s2, esp32s3, esp32c3]
+        idf_version: [ "espressif/idf:release-v4.1", "espressif/idf:release-v4.2", "espressif/idf:release-v4.3", "espressif/idf:release-v4.4" ]
+        exclude:
+          - idf_target: esp32s2
+            idf_version: "espressif/idf:release-v4.1"
+          - idf_target: esp32c3
+            idf_version: "espressif/idf:release-v4.1"
+          - idf_target: esp32c3
+            idf_version: "espressif/idf:release-v4.2"
+          - idf_target: esp32s3
+            idf_version: "espressif/idf:release-v4.1"
+          - idf_target: esp32s3
+            idf_version: "espressif/idf:release-v4.2"
+          - idf_target: esp32s3
+            idf_version: "espressif/idf:release-v4.3"
+
+    container:
+      image: ${{ matrix.idf_version }}
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: micro_ros_espidf_component
+
+      - name: Dependencies
+        shell: bash
+        run: |
+          apt update
+          export DEBIAN_FRONTEND=noninteractive
+          apt install -y git python3-pip
+          . $IDF_PATH/export.sh
+          pip3 install catkin_pkg lark-parser empy colcon-common-extensions
+          # This line avoids the error when using Python < 3.7 https://importlib-resources.readthedocs.io/en/latest/
+          pip3 install importlib-resources
+
+      - name: Build sample - int32_publisher
+        shell: bash
+        run: |
+          . $IDF_PATH/export.sh
+          cd micro_ros_espidf_component/examples/int32_publisher
+          idf.py set-target ${{ matrix.idf_target }}
+          idf.py build
+
+      - name: Build sample - low_consumption
+        shell: bash
+        if: matrix.idf_target != 'esp32c3' && matrix.idf_target != 'esp32s3'
+        run: |
+          . $IDF_PATH/export.sh
+          cd micro_ros_espidf_component/examples/low_consumption
+          idf.py set-target ${{ matrix.idf_target }}
+          idf.py build
+
+      - name: Build sample - handle_static_types
+        shell: bash
+        run: |
+          . $IDF_PATH/export.sh
+          cd micro_ros_espidf_component/examples/handle_static_types
+          idf.py set-target ${{ matrix.idf_target }}
+          idf.py build
+
+      - name: Build sample - int32_publisher_custom_transport
+        shell: bash
+        run: |
+          . $IDF_PATH/export.sh
+          cd micro_ros_espidf_component
+          make -f libmicroros.mk clean
+          sed -i 's/DRMW_UXRCE_TRANSPORT=udp/DRMW_UXRCE_TRANSPORT=custom/' colcon.meta
+          cd examples/int32_publisher_custom_transport
+          idf.py set-target ${{ matrix.idf_target }}
+          idf.py build
+
+      - name: EmbeddedRTPS
+        shell: bash
+        run: |
+          . $IDF_PATH/export.sh
+          cd micro_ros_espidf_component
+          make -f libmicroros.mk clean
+          cd examples/int32_publisher_embeddedrtps
+          idf.py set-target ${{ matrix.idf_target }}
+          idf.py build
