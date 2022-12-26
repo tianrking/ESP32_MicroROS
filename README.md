@@ -1,6 +1,7 @@
 ## Dependencies
 
-```git clone  https://github.com/espressif/esp-idf ~/esp-idf
+```bash
+git clone -b release/v4.4 https://github.com/espressif/esp-idf ~/esp-idf
 cd ~/esp-idf
 git submodule update --init --recursive
 export IDF_PATH=~/esp-idf
