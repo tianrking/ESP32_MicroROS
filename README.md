@@ -17,11 +17,17 @@ git clone https://github.com/tianrking/ESP32_MicroROS ~/ESP32_MicroROS
 cd ~/ESP32_MicroROS
 ```
 
-To Build 
+Setup ENV
 
 ```bash
 source ~/.espressif/python_env/*/bin/activate
+pip3 install catkin_pkg lark-parser empy colcon-common-extensions
 . $IDF_PATH/export.sh
+```
+
+To Build 
+
+```bash
 # Set target board [esp32|esp32s2|esp32s3|esp32c3]
 idf.py set-target esp32
 idf.py menuconfig
@@ -30,7 +36,6 @@ idf.py build
 idf.py flash
 idf.py monitor
 ```
-
 
 To clean and rebuild all the micro-ROS library:
 
