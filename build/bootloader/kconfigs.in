@@ -1,0 +1,7 @@
+source "/home/w0x7ce/Desktop/AAA/esp_idf_4.3/components/efuse/Kconfig"
+source "/home/w0x7ce/Desktop/AAA/esp_idf_4.3/components/esp32c3/Kconfig"
+source "/home/w0x7ce/Desktop/AAA/esp_idf_4.3/components/esp_common/Kconfig"
+source "/home/w0x7ce/Desktop/AAA/esp_idf_4.3/components/esp_system/Kconfig"
+source "/home/w0x7ce/Desktop/AAA/esp_idf_4.3/components/log/Kconfig"
+source "/home/w0x7ce/Desktop/AAA/esp_idf_4.3/components/newlib/Kconfig"
+source "/home/w0x7ce/Desktop/AAA/esp_idf_4.3/components/spi_flash/Kconfig"
