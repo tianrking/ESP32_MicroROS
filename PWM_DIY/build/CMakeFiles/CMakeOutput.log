@@ -1,0 +1,401 @@
+The target system is: Generic -  - 
+The host system is: Linux - 5.15.0-57-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-gcc 
+Build flags: -march=rv32imc
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/PWM_DIY/build/CMakeFiles/3.25.1/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-g++ 
+Build flags: -march=rv32imc
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/PWM_DIY/build/CMakeFiles/3.25.1/CompilerIdCXX/a.out"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+riscv32-esp-elf-gcc (crosstool-NG esp-2021r2-patch3) 8.4.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/PWM_DIY/build/CMakeFiles/CMakeScratch/TryCompile-VeFVjt
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_80831 && [1/2] Building C object CMakeFiles/cmTC_80831.dir/CMakeCCompilerABI.c.obj
+Using built-in specs.
+COLLECT_GCC=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-gcc
+Target: riscv32-esp-elf
+Configured with: /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=riscv32-esp-elf --prefix=/builds/idf/crosstool-NG/builds/riscv32-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf --with-headers=/builds/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32imc --with-abi=ilp32 --with-pkgversion='crosstool-NG esp-2021r2-patch3' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-gcov-custom-rtio --enable-libstdcxx-time=yes
+Thread model: posix
+gcc version 8.4.0 (crosstool-NG esp-2021r2-patch3) 
+COLLECT_GCC_OPTIONS='-march=rv32imc' '-v' '-o' 'CMakeFiles/cmTC_80831.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32'
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/cc1 -quiet -v -imultilib rv32imc/ilp32 -iprefix /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/ /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -march=rv32imc -mabi=ilp32 -auxbase-strip CMakeFiles/cmTC_80831.dir/CMakeCCompilerABI.c.obj -version -o /tmp/ccWnvX3i.s
+GNU C17 (crosstool-NG esp-2021r2-patch3) version 8.4.0 (riscv32-esp-elf)
+	compiled by GNU C version 4.9.2, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.19-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/include"
+ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/include-fixed"
+ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/sys-include"
+ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/include
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/include-fixed
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/sys-include
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include
+End of search list.
+GNU C17 (crosstool-NG esp-2021r2-patch3) version 8.4.0 (riscv32-esp-elf)
+	compiled by GNU C version 4.9.2, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.19-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: c5de7e11972a6ab944ec8c2b673f4254
+COLLECT_GCC_OPTIONS='-march=rv32imc' '-v' '-o' 'CMakeFiles/cmTC_80831.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32'
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imc -mabi=ilp32 -o CMakeFiles/cmTC_80831.dir/CMakeCCompilerABI.c.obj /tmp/ccWnvX3i.s
+GNU assembler version 2.35.1 (riscv32-esp-elf) using BFD version (crosstool-NG esp-2021r2-patch3) 2.35.1.20201223
+COMPILER_PATH=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/bin/
+LIBRARY_PATH=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-march=rv32imc' '-v' '-o' 'CMakeFiles/cmTC_80831.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32'
+[2/2] Linking C executable cmTC_80831
+Using built-in specs.
+Reading specs from /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/nosys.specs
+rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence
+COLLECT_GCC=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-gcc
+COLLECT_LTO_WRAPPER=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/lto-wrapper
+Target: riscv32-esp-elf
+Configured with: /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=riscv32-esp-elf --prefix=/builds/idf/crosstool-NG/builds/riscv32-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf --with-headers=/builds/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32imc --with-abi=ilp32 --with-pkgversion='crosstool-NG esp-2021r2-patch3' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-gcov-custom-rtio --enable-libstdcxx-time=yes
+Thread model: posix
+gcc version 8.4.0 (crosstool-NG esp-2021r2-patch3) 
+COMPILER_PATH=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/bin/
+LIBRARY_PATH=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-march=rv32imc' '-nostartfiles' '-march=rv32imc' '-specs=nosys.specs' '-v' '-o' 'cmTC_80831' '-mabi=ilp32'
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/collect2 -plugin /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/liblto_plugin.so -plugin-opt=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccGXX7G1.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -melf32lriscv -o cmTC_80831 -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32 -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32 -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0 -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib CMakeFiles/cmTC_80831.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc --start-group -lgcc -lc -lnosys --end-group
+/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000010054
+COLLECT_GCC_OPTIONS='-march=rv32imc' '-nostartfiles' '-march=rv32imc' '-specs=nosys.specs' '-v' '-o' 'cmTC_80831' '-mabi=ilp32'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/include]
+    add: [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/include-fixed]
+    add: [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/sys-include]
+    add: [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include]
+  end of search list found
+  collapse include dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/include] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/8.4.0/include]
+  collapse include dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/include-fixed] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/8.4.0/include-fixed]
+  collapse include dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/sys-include] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/sys-include]
+  collapse include dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/include]
+  implicit include dirs: [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/8.4.0/include;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/8.4.0/include-fixed;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/sys-include;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(riscv32-esp-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/PWM_DIY/build/CMakeFiles/CMakeScratch/TryCompile-VeFVjt]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/local/bin/ninja cmTC_80831 && [1/2] Building C object CMakeFiles/cmTC_80831.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-gcc]
+  ignore line: [Target: riscv32-esp-elf]
+  ignore line: [Configured with: /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=riscv32-esp-elf --prefix=/builds/idf/crosstool-NG/builds/riscv32-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf --with-headers=/builds/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32imc --with-abi=ilp32 --with-pkgversion='crosstool-NG esp-2021r2-patch3' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-gcov-custom-rtio --enable-libstdcxx-time=yes]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.4.0 (crosstool-NG esp-2021r2-patch3) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imc' '-v' '-o' 'CMakeFiles/cmTC_80831.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32']
+  ignore line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/cc1 -quiet -v -imultilib rv32imc/ilp32 -iprefix /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/ /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -march=rv32imc -mabi=ilp32 -auxbase-strip CMakeFiles/cmTC_80831.dir/CMakeCCompilerABI.c.obj -version -o /tmp/ccWnvX3i.s]
+  ignore line: [GNU C17 (crosstool-NG esp-2021r2-patch3) version 8.4.0 (riscv32-esp-elf)]
+  ignore line: [	compiled by GNU C version 4.9.2  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.19-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/include"]
+  ignore line: [ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/include-fixed"]
+  ignore line: [ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/sys-include"]
+  ignore line: [ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/include]
+  ignore line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/include-fixed]
+  ignore line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/sys-include]
+  ignore line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (crosstool-NG esp-2021r2-patch3) version 8.4.0 (riscv32-esp-elf)]
+  ignore line: [	compiled by GNU C version 4.9.2  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.19-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: c5de7e11972a6ab944ec8c2b673f4254]
+  ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imc' '-v' '-o' 'CMakeFiles/cmTC_80831.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32']
+  ignore line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imc -mabi=ilp32 -o CMakeFiles/cmTC_80831.dir/CMakeCCompilerABI.c.obj /tmp/ccWnvX3i.s]
+  ignore line: [GNU assembler version 2.35.1 (riscv32-esp-elf) using BFD version (crosstool-NG esp-2021r2-patch3) 2.35.1.20201223]
+  ignore line: [COMPILER_PATH=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/bin/]
+  ignore line: [LIBRARY_PATH=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imc' '-v' '-o' 'CMakeFiles/cmTC_80831.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32']
+  ignore line: [[2/2] Linking C executable cmTC_80831]
+  ignore line: [Using built-in specs.]
+  ignore line: [Reading specs from /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/nosys.specs]
+  ignore line: [rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence]
+  ignore line: [COLLECT_GCC=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/lto-wrapper]
+  ignore line: [Target: riscv32-esp-elf]
+  ignore line: [Configured with: /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=riscv32-esp-elf --prefix=/builds/idf/crosstool-NG/builds/riscv32-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf --with-headers=/builds/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32imc --with-abi=ilp32 --with-pkgversion='crosstool-NG esp-2021r2-patch3' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-gcov-custom-rtio --enable-libstdcxx-time=yes]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.4.0 (crosstool-NG esp-2021r2-patch3) ]
+  ignore line: [COMPILER_PATH=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/bin/]
+  ignore line: [LIBRARY_PATH=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imc' '-nostartfiles' '-march=rv32imc' '-specs=nosys.specs' '-v' '-o' 'cmTC_80831' '-mabi=ilp32']
+  link line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/collect2 -plugin /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/liblto_plugin.so -plugin-opt=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccGXX7G1.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -melf32lriscv -o cmTC_80831 -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32 -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32 -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0 -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib CMakeFiles/cmTC_80831.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc --start-group -lgcc -lc -lnosys --end-group]
+    arg [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccGXX7G1.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+    arg [-melf32lriscv] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_80831] ==> ignore
+    arg [-L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32] ==> dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32]
+    arg [-L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32] ==> dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32]
+    arg [-L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0] ==> dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0]
+    arg [-L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc] ==> dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc]
+    arg [-L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib] ==> dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib]
+    arg [CMakeFiles/cmTC_80831.dir/CMakeCCompilerABI.c.obj] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lnosys] ==> lib [nosys]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--start-group] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lnosys] ==> lib [nosys]
+    arg [--end-group] ==> ignore
+  collapse library dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32]
+  collapse library dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/lib/rv32imc/ilp32]
+  collapse library dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/8.4.0]
+  collapse library dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc]
+  collapse library dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/lib]
+  implicit libs: [gcc;c;nosys;c;gcc;gcc;c;nosys]
+  implicit objs: []
+  implicit dirs: [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/lib/rv32imc/ilp32;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/8.4.0;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/lib]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/PWM_DIY/build/CMakeFiles/CMakeScratch/TryCompile-7dcFYV
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_44977 && [1/2] Building CXX object CMakeFiles/cmTC_44977.dir/CMakeCXXCompilerABI.cpp.obj
+Using built-in specs.
+COLLECT_GCC=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-g++
+Target: riscv32-esp-elf
+Configured with: /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=riscv32-esp-elf --prefix=/builds/idf/crosstool-NG/builds/riscv32-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf --with-headers=/builds/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32imc --with-abi=ilp32 --with-pkgversion='crosstool-NG esp-2021r2-patch3' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-gcov-custom-rtio --enable-libstdcxx-time=yes
+Thread model: posix
+gcc version 8.4.0 (crosstool-NG esp-2021r2-patch3) 
+COLLECT_GCC_OPTIONS='-march=rv32imc' '-v' '-o' 'CMakeFiles/cmTC_44977.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32'
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/cc1plus -quiet -v -imultilib rv32imc/ilp32 -iprefix /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/ /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -march=rv32imc -mabi=ilp32 -auxbase-strip CMakeFiles/cmTC_44977.dir/CMakeCXXCompilerABI.cpp.obj -version -o /tmp/ccwW67nD.s
+GNU C++14 (crosstool-NG esp-2021r2-patch3) version 8.4.0 (riscv32-esp-elf)
+	compiled by GNU C version 4.9.2, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.19-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0"
+ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0/riscv32-esp-elf/rv32imc/ilp32"
+ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0/backward"
+ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/include"
+ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/include-fixed"
+ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/sys-include"
+ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0/riscv32-esp-elf/rv32imc/ilp32
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0/backward
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/include
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/include-fixed
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/sys-include
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include
+End of search list.
+GNU C++14 (crosstool-NG esp-2021r2-patch3) version 8.4.0 (riscv32-esp-elf)
+	compiled by GNU C version 4.9.2, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.19-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 0748cccb111fadaeab43e8c793c40a5e
+COLLECT_GCC_OPTIONS='-march=rv32imc' '-v' '-o' 'CMakeFiles/cmTC_44977.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32'
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imc -mabi=ilp32 -o CMakeFiles/cmTC_44977.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccwW67nD.s
+GNU assembler version 2.35.1 (riscv32-esp-elf) using BFD version (crosstool-NG esp-2021r2-patch3) 2.35.1.20201223
+COMPILER_PATH=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/bin/
+LIBRARY_PATH=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-march=rv32imc' '-v' '-o' 'CMakeFiles/cmTC_44977.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32'
+[2/2] Linking CXX executable cmTC_44977
+Using built-in specs.
+Reading specs from /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/nosys.specs
+rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence
+COLLECT_GCC=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-g++
+COLLECT_LTO_WRAPPER=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/lto-wrapper
+Target: riscv32-esp-elf
+Configured with: /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=riscv32-esp-elf --prefix=/builds/idf/crosstool-NG/builds/riscv32-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf --with-headers=/builds/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32imc --with-abi=ilp32 --with-pkgversion='crosstool-NG esp-2021r2-patch3' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-gcov-custom-rtio --enable-libstdcxx-time=yes
+Thread model: posix
+gcc version 8.4.0 (crosstool-NG esp-2021r2-patch3) 
+COMPILER_PATH=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/bin/
+LIBRARY_PATH=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-march=rv32imc' '-nostartfiles' '-march=rv32imc' '-specs=nosys.specs' '-v' '-o' 'cmTC_44977' '-mabi=ilp32'
+ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/collect2 -plugin /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/liblto_plugin.so -plugin-opt=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc8aJBZb.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -melf32lriscv -o cmTC_44977 -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32 -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32 -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0 -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib CMakeFiles/cmTC_44977.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc --start-group -lgcc -lc -lnosys --end-group
+/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000010054
+COLLECT_GCC_OPTIONS='-march=rv32imc' '-nostartfiles' '-march=rv32imc' '-specs=nosys.specs' '-v' '-o' 'cmTC_44977' '-mabi=ilp32'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0]
+    add: [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0/riscv32-esp-elf/rv32imc/ilp32]
+    add: [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0/backward]
+    add: [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/include]
+    add: [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/include-fixed]
+    add: [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/sys-include]
+    add: [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include]
+  end of search list found
+  collapse include dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/include/c++/8.4.0]
+  collapse include dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0/riscv32-esp-elf/rv32imc/ilp32] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/include/c++/8.4.0/riscv32-esp-elf/rv32imc/ilp32]
+  collapse include dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0/backward] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/include/c++/8.4.0/backward]
+  collapse include dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/include] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/8.4.0/include]
+  collapse include dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/include-fixed] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/8.4.0/include-fixed]
+  collapse include dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/sys-include] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/sys-include]
+  collapse include dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/include]
+  implicit include dirs: [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/include/c++/8.4.0;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/include/c++/8.4.0/riscv32-esp-elf/rv32imc/ilp32;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/include/c++/8.4.0/backward;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/8.4.0/include;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/8.4.0/include-fixed;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/sys-include;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(riscv32-esp-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/PWM_DIY/build/CMakeFiles/CMakeScratch/TryCompile-7dcFYV]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/local/bin/ninja cmTC_44977 && [1/2] Building CXX object CMakeFiles/cmTC_44977.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-g++]
+  ignore line: [Target: riscv32-esp-elf]
+  ignore line: [Configured with: /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=riscv32-esp-elf --prefix=/builds/idf/crosstool-NG/builds/riscv32-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf --with-headers=/builds/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32imc --with-abi=ilp32 --with-pkgversion='crosstool-NG esp-2021r2-patch3' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-gcov-custom-rtio --enable-libstdcxx-time=yes]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.4.0 (crosstool-NG esp-2021r2-patch3) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imc' '-v' '-o' 'CMakeFiles/cmTC_44977.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32']
+  ignore line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/cc1plus -quiet -v -imultilib rv32imc/ilp32 -iprefix /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/ /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -march=rv32imc -mabi=ilp32 -auxbase-strip CMakeFiles/cmTC_44977.dir/CMakeCXXCompilerABI.cpp.obj -version -o /tmp/ccwW67nD.s]
+  ignore line: [GNU C++14 (crosstool-NG esp-2021r2-patch3) version 8.4.0 (riscv32-esp-elf)]
+  ignore line: [	compiled by GNU C version 4.9.2  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.19-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0"]
+  ignore line: [ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0/riscv32-esp-elf/rv32imc/ilp32"]
+  ignore line: [ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0/backward"]
+  ignore line: [ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/include"]
+  ignore line: [ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/include-fixed"]
+  ignore line: [ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/sys-include"]
+  ignore line: [ignoring duplicate directory "/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0]
+  ignore line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0/riscv32-esp-elf/rv32imc/ilp32]
+  ignore line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include/c++/8.4.0/backward]
+  ignore line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/include]
+  ignore line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/include-fixed]
+  ignore line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/sys-include]
+  ignore line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (crosstool-NG esp-2021r2-patch3) version 8.4.0 (riscv32-esp-elf)]
+  ignore line: [	compiled by GNU C version 4.9.2  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.19-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 0748cccb111fadaeab43e8c793c40a5e]
+  ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imc' '-v' '-o' 'CMakeFiles/cmTC_44977.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32']
+  ignore line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imc -mabi=ilp32 -o CMakeFiles/cmTC_44977.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccwW67nD.s]
+  ignore line: [GNU assembler version 2.35.1 (riscv32-esp-elf) using BFD version (crosstool-NG esp-2021r2-patch3) 2.35.1.20201223]
+  ignore line: [COMPILER_PATH=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/bin/]
+  ignore line: [LIBRARY_PATH=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imc' '-v' '-o' 'CMakeFiles/cmTC_44977.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32']
+  ignore line: [[2/2] Linking CXX executable cmTC_44977]
+  ignore line: [Using built-in specs.]
+  ignore line: [Reading specs from /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/nosys.specs]
+  ignore line: [rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence]
+  ignore line: [COLLECT_GCC=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/lto-wrapper]
+  ignore line: [Target: riscv32-esp-elf]
+  ignore line: [Configured with: /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=riscv32-esp-elf --prefix=/builds/idf/crosstool-NG/builds/riscv32-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf --with-headers=/builds/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32imc --with-abi=ilp32 --with-pkgversion='crosstool-NG esp-2021r2-patch3' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-gcov-custom-rtio --enable-libstdcxx-time=yes]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.4.0 (crosstool-NG esp-2021r2-patch3) ]
+  ignore line: [COMPILER_PATH=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/bin/]
+  ignore line: [LIBRARY_PATH=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/:/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imc' '-nostartfiles' '-march=rv32imc' '-specs=nosys.specs' '-v' '-o' 'cmTC_44977' '-mabi=ilp32']
+  link line: [ /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/collect2 -plugin /home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/liblto_plugin.so -plugin-opt=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc8aJBZb.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -melf32lriscv -o cmTC_44977 -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32 -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32 -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0 -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc -L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib CMakeFiles/cmTC_44977.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc --start-group -lgcc -lc -lnosys --end-group]
+    arg [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/8.4.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc8aJBZb.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+    arg [-melf32lriscv] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_44977] ==> ignore
+    arg [-L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32] ==> dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32]
+    arg [-L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32] ==> dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32]
+    arg [-L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0] ==> dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0]
+    arg [-L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc] ==> dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc]
+    arg [-L/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib] ==> dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib]
+    arg [CMakeFiles/cmTC_44977.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lnosys] ==> lib [nosys]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--start-group] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lnosys] ==> lib [nosys]
+    arg [--end-group] ==> ignore
+  collapse library dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32]
+  collapse library dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib/rv32imc/ilp32] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/lib/rv32imc/ilp32]
+  collapse library dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/8.4.0]
+  collapse library dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc]
+  collapse library dir [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/lib] ==> [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/lib]
+  implicit libs: [stdc++;m;gcc;c;nosys;c;gcc;gcc;c;nosys]
+  implicit objs: []
+  implicit dirs: [/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/8.4.0/rv32imc/ilp32;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/lib/rv32imc/ilp32;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/8.4.0;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/lib/gcc;/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/riscv32-esp-elf/lib]
+  implicit fwks: []
+
+
+Performing C SOURCE FILE Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS succeeded with the following output:
+Change Dir: /home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/PWM_DIY/build/CMakeFiles/CMakeScratch/TryCompile-d1hpY2
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_c36c2 && [1/2] Building C object CMakeFiles/cmTC_c36c2.dir/src.c.obj
+[2/2] Linking C executable cmTC_c36c2
+/home/w0x7ce/.espressif/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/8.4.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000010054
+
+
+Source file was:
+int main(void) { return 0; }
+
