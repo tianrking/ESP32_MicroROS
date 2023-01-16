@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/UART/uart_echo/build/CMakeFiles/bootloader
+/home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/UART/uart_echo/build/CMakeFiles/bootloader.rule
+/home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/UART/uart_echo/build/CMakeFiles/bootloader-complete.rule
+/home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/UART/uart_echo/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/UART/uart_echo/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/UART/uart_echo/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/UART/uart_echo/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/UART/uart_echo/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/UART/uart_echo/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/UART/uart_echo/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

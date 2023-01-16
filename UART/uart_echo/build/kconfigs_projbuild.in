@@ -1,0 +1,5 @@
+source "/home/w0x7ce/Desktop/AAA/esp_idf_4.3/components/app_update/Kconfig.projbuild"
+source "/home/w0x7ce/Desktop/AAA/esp_idf_4.3/components/bootloader/Kconfig.projbuild"
+source "/home/w0x7ce/Desktop/AAA/esp_idf_4.3/components/esptool_py/Kconfig.projbuild"
+source "/home/w0x7ce/Desktop/AAA/esp_idf_4.3/components/partition_table/Kconfig.projbuild"
+source "/home/w0x7ce/Desktop/AAA/esp32_diy/diy_esp32c3/UART/uart_echo/main/Kconfig.projbuild"

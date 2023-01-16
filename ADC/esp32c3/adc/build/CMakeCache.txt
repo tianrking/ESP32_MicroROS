@@ -692,6 +692,8 @@ _Python3_EXECUTABLE:INTERNAL=/home/w0x7ce/.espressif/python_env/idf4.3_py3.10_en
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;6;32;;;/usr/lib/python3.10;/usr/lib/python3.10;/home/w0x7ce/.espressif/python_env/idf4.3_py3.10_env/lib/python3.10/site-packages;/home/w0x7ce/.espressif/python_env/idf4.3_py3.10_env/lib/python3.10/site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=adbe2e9d03e1c0a8055c81ffb52a359d
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 
