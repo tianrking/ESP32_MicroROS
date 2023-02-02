@@ -43,6 +43,9 @@ sensor_msgs__msg__Range range_msg;
 rcl_publisher_t imu_publisher;
 sensor_msgs__msg__Imu imu_msg;
 
+rcl_publisher_t temperature_publisher;
+sensor_msgs__msg__Temperature temperature_msg;
+
 int kk = 1 ;
 
 void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
@@ -140,6 +143,12 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
         imu_msg.orientation_covariance[8] = 0.0025;
 
 		RCSOFTCHECK(rcl_publish(&imu_publisher, &imu_msg, NULL));
+
+		temperature_msg.header.frame_id = micro_ros_string_utilities_set(temperature_msg.header.frame_id, "/temperature_link");
+		temperature_msg.temperature = send_msg.data ;
+		temperature_msg.variance = send_msg.data ;
+		RCSOFTCHECK(rcl_publish(&temperature_publisher, &temperature_msg, NULL));
+
 		send_msg.data++;
 	}
 }
@@ -200,6 +209,13 @@ void micro_ros_task(void * arg)
 		&node,
 		ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Imu),
 		"imu_publisher"));
+	
+	// Create imu temperature
+	RCCHECK(rclc_publisher_init_default(
+		&temperature_publisher,
+		&node,
+		ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Temperature),
+		"temperature_publisher"));
 
 	// Create timer.
 	rcl_timer_t timer = rcl_get_zero_initialized_timer();
@@ -231,6 +247,8 @@ void micro_ros_task(void * arg)
 	RCCHECK(rcl_subscription_fini(&subscriber, &node));
 	RCCHECK(rcl_publisher_fini(&publisher, &node));
 	RCCHECK(rcl_publisher_fini(&range_publisher, &node));
+	RCCHECK(rcl_publisher_fini(&imu_publisher, &node));
+	RCCHECK(rcl_publisher_fini(&temperature_publisher, &node));
 	RCCHECK(rcl_node_fini(&node));
 
   	vTaskDelete(NULL);
