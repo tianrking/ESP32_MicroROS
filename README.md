@@ -78,6 +78,5 @@ docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agen
 ```
 
 
-
-
-
+TEST OK:
+esp-idf5.2 with microros humbleon esp32
