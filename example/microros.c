@@ -254,140 +254,17 @@ void micro_ros_task(void * arg)
   	vTaskDelete(NULL);
 }
 
-void app_main(void)
-{
-#if defined(CONFIG_MICRO_ROS_ESP_NETIF_WLAN) || defined(CONFIG_MICRO_ROS_ESP_NETIF_ENET)
-    ESP_ERROR_CHECK(uros_network_interface_initialize());
-#endif
+// void app_main(void)
+// {
+// #if defined(CONFIG_MICRO_ROS_ESP_NETIF_WLAN) || defined(CONFIG_MICRO_ROS_ESP_NETIF_ENET)
+//     ESP_ERROR_CHECK(uros_network_interface_initialize());
+// #endif
 
-    //pin micro-ros task in APP_CPU to make PRO_CPU to deal with wifi:
-    xTaskCreate(micro_ros_task,
-            "uros_task",
-            CONFIG_MICRO_ROS_APP_STACK,
-            NULL,
-            CONFIG_MICRO_ROS_APP_TASK_PRIO,
-            NULL);
-}
-
-#include <stdio.h>
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "driver/ledc.h"
-#include "esp_err.h"
-
-#define LEDC_HS_TIMER          LEDC_TIMER_0
-#define LEDC_HS_MODE           LEDC_HIGH_SPEED_MODE
-#define LEDC_HS_CH0_GPIO       (18) // 第一个电机的GPIO
-#define LEDC_HS_CH1_GPIO       (19) // 第二个电机的GPIO
-#define LEDC_HS_CH0_CHANNEL    LEDC_CHANNEL_0
-#define LEDC_HS_CH1_CHANNEL    LEDC_CHANNEL_1
-#define LEDC_FREQ_HZ           (5000) // PWM信号频率
-#define LEDC_RESOLUTION        LEDC_TIMER_13_BIT // PWM分辨率
-
-void ledc_init(void) {
-    // 设置定时器配置
-    ledc_timer_config_t ledc_timer = {
-        .duty_resolution = LEDC_RESOLUTION,
-        .freq_hz = LEDC_FREQ_HZ,
-        .speed_mode = LEDC_HS_MODE,
-        .timer_num = LEDC_HS_TIMER,
-        .clk_cfg = LEDC_AUTO_CLK,
-    };
-    ledc_timer_config(&ledc_timer);
-
-    // 设置通道配置
-    ledc_channel_config_t ledc_channel[2] = {
-        {
-            .channel    = LEDC_HS_CH0_CHANNEL,
-            .duty       = 0,
-            .gpio_num   = LEDC_HS_CH0_GPIO,
-            .speed_mode = LEDC_HS_MODE,
-            .hpoint     = 0,
-            .timer_sel  = LEDC_HS_TIMER
-        },
-        {
-            .channel    = LEDC_HS_CH1_CHANNEL,
-            .duty       = 0,
-            .gpio_num   = LEDC_HS_CH1_GPIO,
-            .speed_mode = LEDC_HS_MODE,
-            .hpoint     = 0,
-            .timer_sel  = LEDC_HS_TIMER
-        }
-    };
-
-    // 配置LED控制器通道
-    for (int ch = 0; ch < 2; ch++) {
-        ledc_channel_config(&ledc_channel[ch]);
-    }
-}
-
-// 设置电机速度百分比，范围为0到100
-void set_motor_speed_percentage(int motor, int percentage) {
-    if (percentage < 0 || percentage > 100) {
-        printf("Percentage out of range (0-100)\n");
-        return;
-    }
-    // 将百分比转换为具体的PWM占空比值
-    uint32_t duty = (percentage * ((1 << LEDC_RESOLUTION) - 1)) / 100;
-    
-    // 根据电机选择对应的通道
-    ledc_channel_t channel = (motor == 1) ? LEDC_HS_CH0_CHANNEL : LEDC_HS_CH1_CHANNEL;
-    
-    ledc_set_duty(LEDC_HS_MODE, channel, duty);
-    ledc_update_duty(LEDC_HS_MODE, channel);
-}
-
-void app_main(void) {
-    // 初始化PWM
-    ledc_init();
-
-    // 设置电机速度为50%，作为示例
-    set_motor_speed_percentage(1, 50); // 第一个电机
-    // set_motor_speed_percentage(2, 75); // 第二个电机
-
-    // 以下代码可以根据需要加入其他逻辑
-}
-
-#include "driver/ledc.h"
-#include "esp_err.h"
-
-void app_main(void) {
-    ledc_timer_config_t ledc_timer = {
-        .duty_resolution = LEDC_TIMER_13_BIT,
-        .freq_hz = 5000,
-        .speed_mode = LEDC_HIGH_SPEED_MODE,
-        .timer_num = LEDC_TIMER_0,
-        .clk_cfg = LEDC_AUTO_CLK,
-    };
-    ledc_timer_config(&ledc_timer);
-
-    ledc_update_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_1);
-	#include "driver/ledc.h"
-#include "esp_err.h"
-
-void app_main(void) {
-    ledc_timer_config_t ledc_timer = {
-        .duty_resolution = LEDC_TIMER_13_BIT,
-        .freq_hz = 5000,
-        .speed_mode = LEDC_HIGH_SPEED_MODE,
-        .timer_num = LEDC_TIMER_0,
-        .clk_cfg = LEDC_AUTO_CLK,
-    };
-    ledc_timer_config(&ledc_timer);
-
-    ledc_channel_config_t ledc_channel = {
-        .channel    = LEDC_CHANNEL_1,
-        .duty       = 0,
-        .gpio_num   = 19,
-        .speed_mode = LEDC_HIGH_SPEED_MODE,
-        .hpoint     = 0,
-        .timer_sel  = LEDC_TIMER_0
-    };
-    ledc_channel_config(&ledc_channel);
-
-    // 设置占空比为50%
-    ledc_set_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_1, 4096);
-    ledc_update_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_1);
-}
-
-}
+//     //pin micro-ros task in APP_CPU to make PRO_CPU to deal with wifi:
+//     xTaskCreate(micro_ros_task,
+//             "uros_task",
+//             CONFIG_MICRO_ROS_APP_STACK,
+//             NULL,
+//             CONFIG_MICRO_ROS_APP_TASK_PRIO,
+//             NULL);
+// }

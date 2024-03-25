@@ -43,13 +43,13 @@ void set_dual_duty_cycle(float duty_cycle_a, float duty_cycle_b) {
     mcpwm_set_duty_type(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
 }
 
-void app_main(void) {
-    // 初始化MCPWM
-    mcpwm_example_initialize();
+// void app_main(void) {
+//     // 初始化MCPWM
+//     mcpwm_example_initialize();
 
-    // 设置第一个输出的占空比为40%，第二个输出的占空比为60%
-    set_dual_duty_cycle(40.0, 60.0);
+//     // 设置第一个输出的占空比为40%，第二个输出的占空比为60%
+//     set_dual_duty_cycle(40.0, 60.0);
 
-    // 在这里，电机将按照设定的占空比运行
-    // 您可以根据需要添加更多的逻辑或控制代码
-}
+//     // 在这里，电机将按照设定的占空比运行
+//     // 您可以根据需要添加更多的逻辑或控制代码
+// }

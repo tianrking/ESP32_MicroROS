@@ -1,0 +1,5 @@
+{
+    "files.associations": {
+        "wit_c_sdk.h": "c"
+    }
+}
