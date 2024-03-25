@@ -1,12 +1,12 @@
 ## Dependencies
 
 ```bash
-git clone -b release/v4.4 https://github.com/espressif/esp-idf ~/esp-idf
-cd ~/esp-idf
+git clone -b release/v5.2 https://github.com/espressif/esp-idf ~/esp-idf_5.2
+cd ~/esp-idf_5.2
 git submodule update --init --recursive
-export IDF_PATH=~/esp-idf
+export IDF_PATH=~/esp-idf_5.2
 
-git clone https://github.com/micro-ROS/micro_ros_espidf_component ~/micro_ros_espidf_component
+git clone https://github.com/micro-ROS/micro_ros_espidf_component ~/micro_ros_espidf_component -b humble
 export IDF_ROS_PATH=~/micro_ros_espidf_component
 ```
 
