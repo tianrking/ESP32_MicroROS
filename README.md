@@ -2,7 +2,7 @@
 
 ```bash
 git clone -b release/v5.2 https://github.com/espressif/esp-idf ~/esp-idf_v5.2
-cd ~/esp-idf_5.2
+cd ~/esp-idf_v5.2
 git submodule update --init --recursive
 export IDF_PATH=~/esp-idf_v5.2
 
