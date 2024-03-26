@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "wit_c_sdk.h": "c"
+        "wit_c_sdk.h": "c",
+        "microros.h": "c",
+        "string.h": "c"
     }
 }
