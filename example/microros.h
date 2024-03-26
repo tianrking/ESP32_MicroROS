@@ -14,5 +14,6 @@
 // void timer_callback(rcl_timer_t * timer, int64_t last_call_time);
 // void subscription_callback(const void * msgin);
 void micro_ros_task(void * arg);
+float latitude,longitude,altitude;
 
 #endif // MICROROS_TASK_H

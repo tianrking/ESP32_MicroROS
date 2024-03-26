@@ -51,6 +51,7 @@ sensor_msgs__msg__Temperature temperature_msg;
 
 int kk = 1 ;
 extern float fAcc[3], fGyro[3], fAngle[3];
+extern float latitude,longitude,altitude;
 
 void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
 {
@@ -92,6 +93,9 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
         gps_msg.longitude = rand() % 180; // 示例: 生成随机经度
         gps_msg.altitude = rand() % 100; // 示例: 生成随机高度
 
+		latitude = gps_msg.latitude;
+		longitude = gps_msg.longitude;
+		altitude = gps_msg.altitude;
         // 发布GPS消息
         RCSOFTCHECK(rcl_publish(&gps_publisher, &gps_msg, NULL));
     }

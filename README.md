@@ -8,6 +8,10 @@ export IDF_PATH=~/esp-idf_v5.2
 
 git clone https://github.com/micro-ROS/micro_ros_espidf_component ~/micro_ros_espidf_component -b humble
 export IDF_ROS_PATH=~/micro_ros_espidf_component
+
+
+git clone git@github.com:warmcat/libwebsockets.git ~/libwebsockets
+export LIBWEBSOCKETS_DIR=~/libwebsockets
 ```
 
 ## Example
