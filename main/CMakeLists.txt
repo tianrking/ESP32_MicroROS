@@ -6,6 +6,7 @@ idf_component_register(
         "../example/microros.c"                 # Micro-ROS 
         "../example/mcpwm_motor_control.c"      # Motor control using MCPWM
         "../example/pcnt_rotary_encoder.c"      # Rotary encoder using PCNT
+        "../example/ledc_motor_control.c"
         "../network_3rd/http_handle.c"
         "../network_3rd/websocket_handle.c"
         "../network_3rd/mqtt_handle.c"
@@ -20,4 +21,5 @@ idf_component_register(
         "../example/"
         "../network_3rd/"
         "../navigate"
+    
 )

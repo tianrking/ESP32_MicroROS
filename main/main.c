@@ -18,6 +18,9 @@
 #include "websocket_handle.h"
 #include "mqtt_handle.h"
 
+// #include "mcpwm_motor_control.h"
+#include "ledc_motor_control.h"
+
 #define TAG "MEM_CHECK"
 
 // 内存检查任务
@@ -40,10 +43,15 @@ void app_main(void)
             CONFIG_MICRO_ROS_APP_TASK_PRIO,
             NULL);
         
-        // xTaskCreate(http_request_task, "http_request_task", 8192, NULL, 5, NULL);
+        xTaskCreate(http_request_task, "http_request_task", 8192, NULL, 5, NULL);
         xTaskCreate(memory_check_task, "memory_check_task", 5120, NULL, 5, NULL);
         // xTaskCreate(mqtt_app_task, "mqtt_app_task", 4096, NULL, 5, NULL);
         // xTaskCreate(ws_server_task, "ws_server_task", 4096, NULL, 5, NULL);
+
+        
+    // xTaskCreate(motor_control_task, "motor_control_task", 4096, NULL, 5, NULL);
+
+    xTaskCreate(ledc_motor_control_task, "motor_control_task", 4096, NULL, 5, NULL);
 
 	wit_init_all();
 	while (1)

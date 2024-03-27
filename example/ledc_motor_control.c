@@ -1,5 +1,4 @@
-#include "driver/ledc.h"
-#include "esp_err.h"
+#include "ledc_motor_control.h"
 
 // 电机控制的GPIO定义
 #define MOTOR_A_GPIO 18
@@ -15,18 +14,19 @@
 #define LEDC_FREQ_HZ           (1000)   // PWM频率为1kHz
 #define LEDC_RESOLUTION        LEDC_TIMER_10_BIT // 分辨率为10位
 
-void app_main(void) {
-    // 设置LEDC定时器配置
+/**
+ * 初始化LEDC定时器和通道，用于控制电机
+ */
+void ledc_motor_init(void) {
     ledc_timer_config_t ledc_timer = {
-        .duty_resolution = LEDC_RESOLUTION, // 分辨率
-        .freq_hz = LEDC_FREQ_HZ,             // PWM信号频率
-        .speed_mode = LEDC_HS_MODE,          // 速度模式
-        .timer_num = LEDC_HS_TIMER           // 定时器编号
+        .duty_resolution = LEDC_RESOLUTION,
+        .freq_hz = LEDC_FREQ_HZ,
+        .speed_mode = LEDC_HS_MODE,
+        .timer_num = LEDC_HS_TIMER,
+        .clk_cfg = LEDC_AUTO_CLK, // 使用自动时钟配置
     };
-    // 初始化LEDC定时器
     ledc_timer_config(&ledc_timer);
 
-    // 设置LEDC通道配置 - 电机A
     ledc_channel_config_t ledc_channel_0 = {
         .channel    = LEDC_HS_CH0_CHANNEL,
         .duty       = 0,
@@ -35,7 +35,8 @@ void app_main(void) {
         .hpoint     = 0,
         .timer_sel  = LEDC_HS_TIMER
     };
-    // 设置LEDC通道配置 - 电机B
+    ledc_channel_config(&ledc_channel_0);
+
     ledc_channel_config_t ledc_channel_1 = {
         .channel    = LEDC_HS_CH1_CHANNEL,
         .duty       = 0,
@@ -44,16 +45,37 @@ void app_main(void) {
         .hpoint     = 0,
         .timer_sel  = LEDC_HS_TIMER
     };
-
-    // 初始化LEDC通道
-    ledc_channel_config(&ledc_channel_0);
     ledc_channel_config(&ledc_channel_1);
-
-    // 设置电机A的占空比为40%
-    ledc_set_duty(LEDC_HS_MODE, LEDC_HS_CH0_CHANNEL, 1024 * 40 / 100);
-    ledc_update_duty(LEDC_HS_MODE, LEDC_HS_CH0_CHANNEL);
-
-    // 设置电机B的占空比为60%
-    ledc_set_duty(LEDC_HS_MODE, LEDC_HS_CH1_CHANNEL, 1024 * 60 / 100);
-    ledc_update_duty(LEDC_HS_MODE, LEDC_HS_CH1_CHANNEL);
 }
+
+/**
+ * FreeRTOS任务，用于控制电机的占空比
+ */
+void ledc_motor_control_task(void *pvParameters) {
+    // 电机PWM占空比初始值
+    uint32_t duty_a = 1024 * 40 / 100; // 40%
+    uint32_t duty_b = 1024 * 60 / 100; // 60%
+
+    // 初始化LEDC
+    ledc_motor_init();
+
+    while (1) {
+        // 设置电机A的占空比
+        ledc_set_duty(LEDC_HS_MODE, LEDC_HS_CH0_CHANNEL, duty_a);
+        ledc_update_duty(LEDC_HS_MODE, LEDC_HS_CH0_CHANNEL);
+
+        // 设置电机B的占空比
+        ledc_set_duty(LEDC_HS_MODE, LEDC_HS_CH1_CHANNEL, duty_b);
+        ledc_update_duty(LEDC_HS_MODE, LEDC_HS_CH1_CHANNEL);
+
+        // 简单的占空比调整逻辑，用于示范
+        duty_a = (duty_a + 102) % 1024;
+        duty_b = (duty_b + 204) % 1024;
+
+        vTaskDelay(pdMS_TO_TICKS(1000)); // 每秒更新一次
+    }
+}
+
+// void app_main(void) {
+//     xTaskCreate(motor_control_task, "motor_control_task", 2048, NULL, 5, NULL);
+// }

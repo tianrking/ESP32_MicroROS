@@ -1,19 +1,20 @@
-#ifndef MCPWM_CONTROL_H
-#define MCPWM_CONTROL_H
+// 假设源文件命名为 mcpwm_motor_control.h
+#ifndef MCPWM_MOTOR_CONTROL_H
+#define MCPWM_MOTOR_CONTROL_H
 
-#include "driver/mcpwm.h"
-#include "esp_err.h"
+#include "driver/mcpwm_prelude.h" // 引用MCPWM的新API头文件
+#include <stdio.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "driver/mcpwm_prelude.h"
+#include "esp_log.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-// 定义MCPWM操作的GPIO
-#define MCPWM_GPIO_A 18
-#define MCPWM_GPIO_B 19
-
 /**
- * @brief MCPWM 初始化配置。
+ * @brief 初始化MCPWM配置，设置GPIO和MCPWM单元。
  */
 void mcpwm_example_initialize(void);
 
@@ -25,8 +26,15 @@ void mcpwm_example_initialize(void);
  */
 void set_dual_duty_cycle(float duty_cycle_a, float duty_cycle_b);
 
+/**
+ * @brief 电机控制任务，不断设置MCPWM的占空比。
+ * 
+ * @param pvParameters 传递给任务的参数，未使用。
+ */
+void motor_control_task(void *pvParameters);
+
 #ifdef __cplusplus
 }
 #endif
 
-#endif // MCPWM_CONTROL_H
+#endif // MCPWM_MOTOR_CONTROL_H
