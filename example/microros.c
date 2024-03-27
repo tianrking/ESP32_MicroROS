@@ -21,6 +21,7 @@
 #include <sensor_msgs/msg/battery_state.h>
 #include <sensor_msgs/msg/temperature.h>
 #include <sensor_msgs/msg/nav_sat_fix.h>
+#include <geometry_msgs/msg/twist.h>
 
 #ifdef CONFIG_MICRO_ROS_ESP_XRCE_DDS_MIDDLEWARE
 #include <rmw_microros/rmw_microros.h>
@@ -28,6 +29,9 @@
 
 #define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){printf("Failed status on line %d: %d. Aborting.\n",__LINE__,(int)temp_rc);vTaskDelete(NULL);}}
 #define RCSOFTCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){printf("Failed status on line %d: %d. Continuing.\n",__LINE__,(int)temp_rc);}}
+
+rcl_subscription_t cmd_vel_subscriber;
+geometry_msgs__msg__Twist cmd_vel_msg;
 
 rcl_publisher_t gps_publisher;
 sensor_msgs__msg__NavSatFix gps_msg;
@@ -82,7 +86,7 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
         // 发布IMU消息
         RCSOFTCHECK(rcl_publish(&imu_publisher, &imu_msg, NULL));
 
-        // RCSOFTCHECK(rcl_publish(&publisher, &send_msg, NULL));
+        RCSOFTCHECK(rcl_publish(&publisher, &send_msg, NULL));
 		send_msg.data++;
 
         // 填充并发布GPS消息
@@ -100,6 +104,22 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
         RCSOFTCHECK(rcl_publish(&gps_publisher, &gps_msg, NULL));
     }
 }
+
+#define CMD_VEL_TAG "cmd_vel"
+void cmd_vel_callback(const void * msgin) {
+    const geometry_msgs__msg__Twist * msg = (const geometry_msgs__msg__Twist *)msgin;
+    float linear_velocity = msg->linear.x;
+    float angular_velocity = msg->angular.z;
+    
+  	// 根据差分驱动模型计算左右轮速度
+    // float left_wheel_speed = linear_velocity - (wheel_base / 2.0f) * angular_velocity;
+    // float right_wheel_speed = linear_velocity + (wheel_base / 2.0f) * angular_velocity;
+
+    // 使用ESP-IDF日志系统输出接收到的速度和计算出的轮速
+    ESP_LOGI(CMD_VEL_TAG, "Received cmd_vel: linear = %f m/s, angular = %f rad/s", linear_velocity, angular_velocity);
+   // ESP_LOGI(CMD_VEL_TAG, "Calculated wheel speeds: left = %f m/s, right = %f m/s", left_wheel_speed, right_wheel_speed);
+}
+
 
 void subscription_callback(const void * msgin)
 {
@@ -131,11 +151,11 @@ void micro_ros_task(void * arg)
 	RCCHECK(rclc_node_init_default(&node, "int32_publisher_subscriber_rclc", "", &support));
 
 	// Create publisher.
-	// RCCHECK(rclc_publisher_init_default(
-	// 	&publisher,
-	// 	&node,
-	// 	ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
-	// 	"int32_publisher"));
+	RCCHECK(rclc_publisher_init_default(
+		&publisher,
+		&node,
+		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
+		"int32_publisher"));
 
 	// Create subscriber.
 	RCCHECK(rclc_subscription_init_default(
@@ -143,6 +163,14 @@ void micro_ros_task(void * arg)
 		&node,
 		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
 		"int32_subscriber"));
+
+	// Create cmd_vel subscriber.
+	RCCHECK(rclc_subscription_init_default(
+		&cmd_vel_subscriber,
+		&node,
+		ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Twist),
+		"cmd_vel"));
+
 	
 	// Create GPS publisher.
     RCCHECK(rclc_publisher_init_default(
@@ -169,14 +197,15 @@ void micro_ros_task(void * arg)
 
 	// Create executor.
 	rclc_executor_t executor = rclc_executor_get_zero_initialized_executor();
-	RCCHECK(rclc_executor_init(&executor, &support.context, 10, &allocator));
+	RCCHECK(rclc_executor_init(&executor, &support.context, 5, &allocator));
 	unsigned int rcl_wait_timeout = 500;   // in ms
 	RCCHECK(rclc_executor_set_timeout(&executor, RCL_MS_TO_NS(rcl_wait_timeout)));
 
 	// Add timer and subscriber to executor.
 	RCCHECK(rclc_executor_add_timer(&executor, &timer));
-	// RCCHECK(rclc_executor_add_subscription(&executor, &subscriber, &recv_msg, &subscription_callback, ON_NEW_DATA));
-	
+	RCCHECK(rclc_executor_add_subscription(&executor, &subscriber, &recv_msg, &subscription_callback, ON_NEW_DATA));
+	RCCHECK(rclc_executor_add_subscription(&executor, &cmd_vel_subscriber, &cmd_vel_msg, &cmd_vel_callback, ON_NEW_DATA));
+
 	// Spin forever.
 	send_msg.data = 0;
 	while(1){
@@ -188,6 +217,7 @@ void micro_ros_task(void * arg)
 	RCCHECK(rcl_subscription_fini(&subscriber, &node));
 	RCCHECK(rcl_publisher_fini(&publisher, &node));
 	// RCCHECK(rcl_publisher_fini(&range_publisher, &node));
+	RCCHECK(rcl_subscription_fini(&cmd_vel_subscriber, &node));
 	RCCHECK(rcl_publisher_fini(&imu_publisher, &node));
 	RCCHECK(rcl_publisher_fini(&gps_publisher, &node));
 	RCCHECK(rcl_node_fini(&node));

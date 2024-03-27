@@ -15,5 +15,5 @@
 // void subscription_callback(const void * msgin);
 void micro_ros_task(void * arg);
 float latitude,longitude,altitude;
-
+void velocity_callback(const void *msgin);
 #endif // MICROROS_TASK_H
