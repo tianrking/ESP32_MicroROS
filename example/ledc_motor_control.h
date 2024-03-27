@@ -6,6 +6,7 @@
 #include "freertos/task.h"
 #include "driver/ledc.h"
 #include "esp_err.h"
+#include "esp_random.h" // 包含esp_random()
 
 #ifdef __cplusplus
 extern "C" {
@@ -22,6 +23,8 @@ void ledc_motor_init(void);
  * @param pvParameters 传递给任务的参数，未使用。
  */
 void ledc_motor_control_task(void *pvParameters);
+void set_motor_speed(int speed);
+void set_motor_speed_test(int speed);
 
 #ifdef __cplusplus
 }

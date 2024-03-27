@@ -14,6 +14,16 @@
 #define LEDC_FREQ_HZ           (1000)   // PWM频率为1kHz
 #define LEDC_RESOLUTION        LEDC_TIMER_10_BIT // 分辨率为10位
 
+
+// 定义电机旋转状态
+typedef enum {
+    MOTOR_FORWARD,
+    MOTOR_REVERSE
+} motor_direction_t;
+
+// 声明电机当前旋转方向
+static motor_direction_t current_direction = MOTOR_FORWARD;
+
 /**
  * 初始化LEDC定时器和通道，用于控制电机
  */
@@ -48,31 +58,89 @@ void ledc_motor_init(void) {
     ledc_channel_config(&ledc_channel_1);
 }
 
+void set_motor_speed_test(int speed) {
+    uint32_t abs_speed = abs(speed); // 获取速度的绝对值
+
+    // 确保速度值不超出范围
+    if (abs_speed > 100) {
+        abs_speed = 100;
+    }
+
+    uint32_t duty_cycle = 1024 * abs_speed / 100; // 转换为对应的占空比值
+
+    // 根据速度正负判断方向
+    if (speed >= 0) {
+        current_direction = MOTOR_FORWARD;
+        // 设置正转
+        ledc_set_duty(LEDC_HS_MODE, LEDC_HS_CH0_CHANNEL, duty_cycle);
+        ledc_update_duty(LEDC_HS_MODE, LEDC_HS_CH0_CHANNEL);
+        // 停止另一通道
+        ledc_set_duty(LEDC_HS_MODE, LEDC_HS_CH1_CHANNEL, 0);
+        ledc_update_duty(LEDC_HS_MODE, LEDC_HS_CH1_CHANNEL);
+    } else {
+        current_direction = MOTOR_REVERSE;
+        // 设置反转
+        ledc_set_duty(LEDC_HS_MODE, LEDC_HS_CH1_CHANNEL, duty_cycle);
+        ledc_update_duty(LEDC_HS_MODE, LEDC_HS_CH1_CHANNEL);
+        // 停止另一通道
+        ledc_set_duty(LEDC_HS_MODE, LEDC_HS_CH0_CHANNEL, 0);
+        ledc_update_duty(LEDC_HS_MODE, LEDC_HS_CH0_CHANNEL);
+    }
+}
+
+/**
+ * 设置电机速度和方向。
+ * 
+ * @param speed 正值表示正转速度的占空比，负值表示反转速度的占空比。
+ */
+void set_motor_speed(int speed) {
+    uint32_t abs_speed = abs(speed); // 获取速度的绝对值
+
+    // 确保速度值不超出范围
+    if (abs_speed > 100) {
+        abs_speed = 100;
+    }
+
+    uint32_t duty_cycle = 1024 * abs_speed / 100; // 转换为对应的占空比值
+
+    // 根据速度正负判断方向
+    if (speed >= 0) {
+        current_direction = MOTOR_FORWARD;
+        // 设置正转
+        ledc_set_duty(LEDC_HS_MODE, LEDC_HS_CH0_CHANNEL, duty_cycle);
+        ledc_update_duty(LEDC_HS_MODE, LEDC_HS_CH0_CHANNEL);
+        // 停止另一通道
+        ledc_set_duty(LEDC_HS_MODE, LEDC_HS_CH1_CHANNEL, 0);
+        ledc_update_duty(LEDC_HS_MODE, LEDC_HS_CH1_CHANNEL);
+    } else {
+        current_direction = MOTOR_REVERSE;
+        // 设置反转
+        ledc_set_duty(LEDC_HS_MODE, LEDC_HS_CH1_CHANNEL, duty_cycle);
+        ledc_update_duty(LEDC_HS_MODE, LEDC_HS_CH1_CHANNEL);
+        // 停止另一通道
+        ledc_set_duty(LEDC_HS_MODE, LEDC_HS_CH0_CHANNEL, 0);
+        ledc_update_duty(LEDC_HS_MODE, LEDC_HS_CH0_CHANNEL);
+    }
+}
+
 /**
  * FreeRTOS任务，用于控制电机的占空比
  */
 void ledc_motor_control_task(void *pvParameters) {
-    // 电机PWM占空比初始值
-    uint32_t duty_a = 1024 * 40 / 100; // 40%
-    uint32_t duty_b = 1024 * 60 / 100; // 60%
 
     // 初始化LEDC
     ledc_motor_init();
 
     while (1) {
-        // 设置电机A的占空比
-        ledc_set_duty(LEDC_HS_MODE, LEDC_HS_CH0_CHANNEL, duty_a);
-        ledc_update_duty(LEDC_HS_MODE, LEDC_HS_CH0_CHANNEL);
 
-        // 设置电机B的占空比
-        ledc_set_duty(LEDC_HS_MODE, LEDC_HS_CH1_CHANNEL, duty_b);
-        ledc_update_duty(LEDC_HS_MODE, LEDC_HS_CH1_CHANNEL);
+        uint32_t random_speed = esp_random() % 101; // esp_random()返回一个uint32_t随机数，% 101确保结果在0到100范围内
 
-        // 简单的占空比调整逻辑，用于示范
-        duty_a = (duty_a + 102) % 1024;
-        duty_b = (duty_b + 204) % 1024;
+        // 随机决定电机方向：正转或反转
+        motor_direction_t direction = (esp_random() % 2) ? MOTOR_FORWARD : MOTOR_REVERSE;
+        int speed = (direction == MOTOR_FORWARD) ? random_speed : -random_speed; // 如果方向是反转，速度值取负
 
-        vTaskDelay(pdMS_TO_TICKS(1000)); // 每秒更新一次
+        set_motor_speed(speed);
+        vTaskDelay(pdMS_TO_TICKS(2000)); // 每2秒更新一次方向
     }
 }
 
