@@ -24,9 +24,6 @@
 #define LEDC_FREQ_HZ           (1000)   // PWM频率为1kHz
 #define LEDC_RESOLUTION        LEDC_TIMER_10_BIT // 分辨率为10位
 
-// 声明电机当前旋转方向
-static motor_direction_t current_direction = MOTOR_FORWARD;
-
 /**
  * 初始化LEDC定时器和通道，用于控制电机
  */

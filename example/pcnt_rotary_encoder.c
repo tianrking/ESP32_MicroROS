@@ -3,8 +3,14 @@
 #include "esp_log.h"
 #include "driver/pcnt.h"
 
-#define PCNT_INPUT_SIG_IO 18 // Pulse Input GPIO，连接到旋转编码器A信号线
-#define PCNT_INPUT_CTRL_IO 19 // Control Input GPIO，连接到旋转编码器B信号线
+
+#define PCNT_INPUT_SIG_IO 4 // Pulse Input GPIO，连接到旋转编码器A信号线
+#define PCNT_INPUT_CTRL_IO 5 // Control Input GPIO，连接到旋转编码器B信号线
+
+#define PCNT_INPUT_SIG_IO_2 34 // 第二个编码器Pulse Input GPIO，连接到旋转编码器A信号线
+#define PCNT_INPUT_CTRL_IO_2 35 // 第二个编码器Control Input GPIO，连接到旋转编码器B信号线
+
+
 #define PCNT_HIGH_LIMIT 10000
 #define PCNT_LOW_LIMIT -10000
 
@@ -40,16 +46,50 @@ void pcnt_example_init(void) {
     pcnt_counter_pause(PCNT_UNIT_0);
     pcnt_counter_clear(PCNT_UNIT_0);
     pcnt_counter_resume(PCNT_UNIT_0);
+
+     // 第二个编码器的通道0配置，用于正转计数
+    pcnt_config_t pcnt_config_a_2 = {
+        .pulse_gpio_num = PCNT_INPUT_SIG_IO_2,
+        .ctrl_gpio_num = PCNT_INPUT_CTRL_IO_2,
+        .channel = PCNT_CHANNEL_0,
+        .unit = PCNT_UNIT_1, // 使用第二个PCNT单元
+        .pos_mode = PCNT_COUNT_INC, // 上升沿增加计数
+        .neg_mode = PCNT_COUNT_DEC, // 下降沿减少计数
+        .lctrl_mode = PCNT_MODE_REVERSE, // 低电平反向
+        .hctrl_mode = PCNT_MODE_KEEP, // 高电平保持
+        .counter_h_lim = PCNT_HIGH_LIMIT,
+        .counter_l_lim = PCNT_LOW_LIMIT,
+    };
+    pcnt_unit_config(&pcnt_config_a_2);
+
+    // 第二个编码器的通道1配置，用于反转计数（与通道0相反）
+    pcnt_config_t pcnt_config_b_2 = pcnt_config_a_2;
+    pcnt_config_b_2.channel = PCNT_CHANNEL_1;
+    pcnt_config_b_2.pos_mode = PCNT_COUNT_DEC;
+    pcnt_config_b_2.neg_mode = PCNT_COUNT_INC;
+    pcnt_config_b_2.lctrl_mode = PCNT_MODE_KEEP;
+    pcnt_config_b_2.hctrl_mode = PCNT_MODE_REVERSE;
+    pcnt_unit_config(&pcnt_config_b_2);
+
+    // 初始化第二个PCNT单元
+    pcnt_counter_pause(PCNT_UNIT_1);
+    pcnt_counter_clear(PCNT_UNIT_1);
+    pcnt_counter_resume(PCNT_UNIT_1);
 }
 
+
 void measure_speed_task(void *arg) {
+    pcnt_example_init();
     int16_t count;
     while (1) {
         vTaskDelay(pdMS_TO_TICKS(500)); // 每500毫秒读取一次
 
         // 获取当前PCNT的计数值
         pcnt_get_counter_value(PCNT_UNIT_0, &count);
-        ESP_LOGI(TAG, "Speed: %d pulses/sec", count);
+        ESP_LOGI(TAG, "Motor 1 Speed:: %d pulses/sec", count);
+
+        pcnt_get_counter_value(PCNT_UNIT_1, &count);
+        ESP_LOGI(TAG, "Motor 2 Speed: %d pulses/sec", count);
 
         // 重置计数器
         pcnt_counter_clear(PCNT_UNIT_0);

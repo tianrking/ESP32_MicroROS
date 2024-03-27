@@ -17,6 +17,7 @@
 #include "http_handle.h"
 #include "websocket_handle.h"
 #include "mqtt_handle.h"
+#include "pcnt_rotary_encoder.h"
 
 // #include "mcpwm_motor_control.h"
 #include "ledc_motor_control.h"
@@ -52,6 +53,8 @@ void app_main(void)
     // xTaskCreate(motor_control_task, "motor_control_task", 4096, NULL, 5, NULL);
 
     xTaskCreate(ledc_motor_control_task, "motor_control_task", 4096, NULL, 5, NULL);
+
+    xTaskCreate(measure_speed_task, "measure_speed_task", 2048, NULL, 10, NULL);
 
 	wit_init_all();
 	while (1)
