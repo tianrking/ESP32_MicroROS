@@ -1,6 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <unistd.h> 
+#include <inttypes.h>
 
 #include "driver/uart.h"
 #include "freertos/FreeRTOS.h"
@@ -34,13 +35,13 @@ void app_main(void)
     //pin micro-ros task in APP_CPU to make PRO_CPU to deal with wifi:
     xTaskCreate(micro_ros_task,
             "uros_task",
-            10240,
+            20480,
             NULL,
             CONFIG_MICRO_ROS_APP_TASK_PRIO,
             NULL);
         
         // xTaskCreate(http_request_task, "http_request_task", 8192, NULL, 5, NULL);
-        // xTaskCreate(memory_check_task, "memory_check_task", 2048, NULL, 5, NULL);
+        xTaskCreate(memory_check_task, "memory_check_task", 5120, NULL, 5, NULL);
         // xTaskCreate(mqtt_app_task, "mqtt_app_task", 4096, NULL, 5, NULL);
         // xTaskCreate(ws_server_task, "ws_server_task", 4096, NULL, 5, NULL);
 
@@ -51,19 +52,51 @@ void app_main(void)
 	}
 }
 
+// static void memory_check_task(void *pvParameter) {
+//     while (1) {
+//         // 获取内存统计信息
+//         multi_heap_info_t info;
+//         heap_caps_get_info(&info, MALLOC_CAP_INTERNAL);
+
+//         // 打印内存统计信息
+//         ESP_LOGI(TAG, "Total internal memory: %d", info.total_free_bytes + info.total_allocated_bytes);
+//         ESP_LOGI(TAG, "Total free memory: %d", info.total_free_bytes);
+//         ESP_LOGI(TAG, "Largest free block: %d", info.largest_free_block);
+//         ESP_LOGI(TAG, "Minimum free memory ever: %d", info.minimum_free_bytes);
+
+//         // 每5秒钟检查一次
+//         vTaskDelay(pdMS_TO_TICKS(5000));
+//     }
+// }
+
+static const char *TAG_MMM = "MemCheck";
 static void memory_check_task(void *pvParameter) {
     while (1) {
-        // 获取内存统计信息
+        // 获取并打印内存统计信息
         multi_heap_info_t info;
         heap_caps_get_info(&info, MALLOC_CAP_INTERNAL);
 
-        // 打印内存统计信息
-        ESP_LOGI(TAG, "Total internal memory: %d", info.total_free_bytes + info.total_allocated_bytes);
-        ESP_LOGI(TAG, "Total free memory: %d", info.total_free_bytes);
-        ESP_LOGI(TAG, "Largest free block: %d", info.largest_free_block);
-        ESP_LOGI(TAG, "Minimum free memory ever: %d", info.minimum_free_bytes);
+        ESP_LOGI(TAG_MMM, "Total internal memory: %zu", info.total_free_bytes + info.total_allocated_bytes);
+        ESP_LOGI(TAG_MMM, "Total free memory: %zu", info.total_free_bytes);
+        ESP_LOGI(TAG_MMM, "Largest free block: %zu", info.largest_free_block);
+        ESP_LOGI(TAG_MMM, "Minimum free memory ever: %zu", info.minimum_free_bytes);
 
-        // 每5秒钟检查一次
+        // 假设系统中不会有超过20个任务同时运行
+        const uint32_t taskArraySize = 20;
+        TaskStatus_t taskStatusArray[taskArraySize];
+        uint32_t totalRunTime;
+
+        // 获取系统中所有任务的状态
+        uint32_t activeTasks = uxTaskGetSystemState(taskStatusArray, taskArraySize, &totalRunTime);
+
+        //逐个打印任务的状态信息
+        for (uint32_t i = 0; i < activeTasks; i++) {
+            ESP_LOGI(TAG_MMM, "Task: %s, Remaining Stack: %" PRIu32,
+                     taskStatusArray[i].pcTaskName,
+                     taskStatusArray[i].usStackHighWaterMark);
+        }
+
+        // 每5秒钟执行一次
         vTaskDelay(pdMS_TO_TICKS(5000));
     }
 }

@@ -10,9 +10,14 @@ idf_component_register(
         "../network_3rd/websocket_handle.c"
         "../network_3rd/mqtt_handle.c"
         "../ble_3rd/ble_handle.c"
+        "../navigate/nav_control.c"
+        "../navigate/gps_drv.c"
+        "../navigate/motor_control.c"
+        "../navigate/pid.c"
     INCLUDE_DIRS 
         ""
         "../ble_3rd/"
         "../example/"
         "../network_3rd/"
+        "../navigate"
 )
