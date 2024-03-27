@@ -22,9 +22,22 @@ void ledc_motor_init(void);
  * 
  * @param pvParameters 传递给任务的参数，未使用。
  */
+
+typedef enum {
+    MOTOR_1 = 0,
+    MOTOR_2,
+    // 如果有更多电机，可以继续添加
+} motor_id_t;
+
+// 定义电机旋转状态
+typedef enum {
+    MOTOR_FORWARD,
+    MOTOR_REVERSE
+} motor_direction_t;
+
 void ledc_motor_control_task(void *pvParameters);
-void set_motor_speed(int speed);
-void set_motor_speed_test(int speed);
+void set_motor_speed(int speed, motor_id_t motor_id);
+void set_motor_pwm_internal(int pwm, motor_id_t motor_id);
 
 #ifdef __cplusplus
 }
