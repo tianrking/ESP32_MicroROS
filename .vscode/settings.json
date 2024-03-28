@@ -3,6 +3,8 @@
         "wit_c_sdk.h": "c",
         "microros.h": "c",
         "string.h": "c",
-        "unistd.h": "c"
+        "unistd.h": "c",
+        "pcnt_rotary_encoder.h": "c",
+        "http_handle.h": "c"
     }
 }

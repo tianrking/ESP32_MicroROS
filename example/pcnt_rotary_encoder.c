@@ -93,6 +93,7 @@ void measure_speed_task(void *arg) {
 
         // 重置计数器
         pcnt_counter_clear(PCNT_UNIT_0);
+        pcnt_counter_clear(PCNT_UNIT_1);
     }
 }
 

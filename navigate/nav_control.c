@@ -19,11 +19,11 @@ void approach_target(void);
 int main()
 {
     // 初始化当前位置和期望位置
-    latitude = 40.712776; // 纽约
+    latitude = 40.712776; // NY
     longitude = -74.005974;
     altitude = 0.0;
 
-    expect_latitude = 42.360081; // 波士顿
+    expect_latitude = 42.360081; // 
     expect_longitude = -71.058884;
     expect_altitude = 0.0;
 

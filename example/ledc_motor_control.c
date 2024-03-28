@@ -1,4 +1,5 @@
 #include "ledc_motor_control.h"
+#include "microros.h"
 
 // 电机控制的GPIO定义
 #define MOTOR_A_GPIO 18
@@ -24,6 +25,7 @@
 #define LEDC_FREQ_HZ           (1000)   // PWM频率为1kHz
 #define LEDC_RESOLUTION        LEDC_TIMER_10_BIT // 分辨率为10位
 
+extern RobotState robot_state;
 /**
  * 初始化LEDC定时器和通道，用于控制电机
  */
@@ -96,8 +98,11 @@ void ledc_motor_control_task(void *pvParameters) {
         motor_direction_t direction = (esp_random() % 2) ? MOTOR_FORWARD : MOTOR_REVERSE;
         int speed = (direction == MOTOR_FORWARD) ? random_speed : -random_speed; // 如果方向是反转，速度值取负
 
-        set_motor_speed(speed,0);
-        set_motor_speed(speed,1);
+        // set_motor_speed(speed,0);
+        // set_motor_speed(speed,1);
+    
+        set_motor_speed(robot_state.RL,0);
+        set_motor_speed(robot_state.RR,1);
         vTaskDelay(pdMS_TO_TICKS(2000)); // 每2秒更新一次方向
     }
 }

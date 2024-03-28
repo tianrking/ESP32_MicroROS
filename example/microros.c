@@ -1,27 +1,5 @@
-#include <string.h>
-#include <stdio.h>
-#include <unistd.h>
-
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "esp_log.h"
-#include "esp_system.h"
-
-#include <uros_network_interfaces.h>
-#include <rcl/rcl.h>
-#include <rcl/error_handling.h>
-#include <std_msgs/msg/int32.h>
-#include <rclc/rclc.h>
-#include <rclc/executor.h>
-
-#include <micro_ros_utilities/type_utilities.h>
-#include <micro_ros_utilities/string_utilities.h>
-#include <sensor_msgs/msg/range.h>
-#include <sensor_msgs/msg/imu.h>
-#include <sensor_msgs/msg/battery_state.h>
-#include <sensor_msgs/msg/temperature.h>
-#include <sensor_msgs/msg/nav_sat_fix.h>
-#include <geometry_msgs/msg/twist.h>
+#include "microros.h"
+#include "motor_control.h"
 
 #ifdef CONFIG_MICRO_ROS_ESP_XRCE_DDS_MIDDLEWARE
 #include <rmw_microros/rmw_microros.h>
@@ -55,7 +33,9 @@ sensor_msgs__msg__Temperature temperature_msg;
 
 int kk = 1 ;
 extern float fAcc[3], fGyro[3], fAngle[3];
-extern float latitude,longitude,altitude;
+float latitude,longitude,altitude;
+
+RobotState robot_state;
 
 void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
 {
@@ -83,6 +63,10 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
         imu_msg.orientation.z = fAngle[2];
         imu_msg.orientation.w = 1.0; // 假设为单位四元数
 
+		memcpy(robot_state.acc, fAcc, sizeof(robot_state.acc));
+		memcpy(robot_state.gyro, fGyro, sizeof(robot_state.gyro));
+		memcpy(robot_state.angle, fAngle, sizeof(robot_state.angle));
+
         // 发布IMU消息
         RCSOFTCHECK(rcl_publish(&imu_publisher, &imu_msg, NULL));
 
@@ -100,6 +84,10 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
 		latitude = gps_msg.latitude;
 		longitude = gps_msg.longitude;
 		altitude = gps_msg.altitude;
+
+		robot_state.latitude  = gps_msg.latitude   ; 
+		robot_state.longitude = gps_msg.longitude  ;
+		robot_state.altitude  = gps_msg.altitude   ;
         // 发布GPS消息
         RCSOFTCHECK(rcl_publish(&gps_publisher, &gps_msg, NULL));
     }
@@ -111,6 +99,10 @@ void cmd_vel_callback(const void * msgin) {
     float linear_velocity = msg->linear.x;
     float angular_velocity = msg->angular.z;
     
+	robot_state.linear_velocity   = linear_velocity ;
+	robot_state.angular_velocity  = angular_velocity;
+
+	calculateWheelSpeedsFromVelocity(robot_state.linear_velocity,robot_state.angular_velocity);
   	// 根据差分驱动模型计算左右轮速度
     // float left_wheel_speed = linear_velocity - (wheel_base / 2.0f) * angular_velocity;
     // float right_wheel_speed = linear_velocity + (wheel_base / 2.0f) * angular_velocity;
