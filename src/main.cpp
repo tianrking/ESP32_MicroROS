@@ -29,8 +29,8 @@ void publisherTask(void *pvParameters) {
   }
 }
 
-char ssid[] = "KUNIU";
-char psk[]= "kuniu666";
+char ssid[] = "OOOO";
+char psk[]= "oooooooo";
 
 void setup() {
   Serial.begin(115200);
